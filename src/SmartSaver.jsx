@@ -189,13 +189,6 @@ const analyzePromotion = (text) => {
   };
 };
 
-const AdBanner = () => (
-  <div className="bg-gray-800 text-white p-2 text-center text-xs w-full shrink-0 flex items-center justify-center space-x-2 z-30">
-    <span className="bg-yellow-500 text-black px-1 rounded text-[10px] font-bold">AD</span>
-    <span>今日特價：衛生紙整箱 $299，點擊購買！</span>
-  </div>
-);
-
 const FeaturePromoDecoder = () => {
   const [analyzedText, setAnalyzedText] = useState("");
   const [result, setResult] = useState(null);
@@ -467,19 +460,9 @@ const App = () => {
     <div className="font-sans text-gray-900 bg-gray-200 h-screen w-full flex justify-center items-center overflow-hidden">
       <div className="w-full h-full max-w-md bg-white relative flex flex-col shadow-2xl overflow-hidden sm:rounded-[3rem] sm:h-[90vh] sm:border-[8px] sm:border-gray-800">
         
-        <div className="h-10 w-full shrink-0 flex items-center justify-between px-6 pt-2 select-none z-20 bg-blue-500 text-white transition-colors duration-300">
-           <span className="text-xs font-bold ml-2">09:41</span>
-           <div className="flex space-x-1">
-             <div className="w-4 h-2.5 rounded-[1px] bg-white"></div>
-             <div className="w-0.5 h-1.5 bg-white/50"></div>
-           </div>
-        </div>
-
         <div className="flex-1 overflow-hidden relative">
           {activeTab === 'decoder' ? <FeaturePromoDecoder /> : <FeaturePriceCompare />}
         </div>
-
-        <AdBanner />
 
         <div className="bg-white/95 backdrop-blur-md border-t border-gray-100 px-6 py-2 flex justify-around items-center shrink-0 pb-6 sm:pb-2 z-20">
           <button 

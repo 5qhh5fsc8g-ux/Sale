@@ -1,4 +1,4 @@
-const CACHE_NAME = 'smartsaver-v1';
+const CACHE_NAME = 'smartsaver-v2';
 const urlsToCache = [
   '/',
   '/index.html',
